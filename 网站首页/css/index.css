@@ -1,0 +1,347 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+form,input{
+    outline: none;
+}
+body{
+    font: 16px/1.5 "Microsoft YaHei","sans-serif";
+    color: #333333;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+/*默认样式*/
+.nav{
+    width: 100%;
+    height: 79px;
+    background: rgba(0,0,0,0.15);
+    position: fixed;
+    top: 0;
+}
+.navContent{
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+}
+.logo{
+    width: 150px;
+    height: 50px;
+    float: left;
+    margin-top: 14px;
+}
+/*行内元素*/
+.logo a{
+    display: block; /*行内元素转化为块元素*/
+    width: 100%;
+    height: 100%;
+}
+.logo a img{
+    width: 100%;
+    height: 100%;
+}
+.nevList{
+    width: 602px;
+    height: 100%;
+    float: right;
+}
+.nevList li{
+    float: left;
+    width: 86px;
+    height: 100%;
+}
+.nevList li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 79px;
+    font-size: 14px;
+    transition: color linear .5s /*过渡属性*/
+}
+/*鼠标移上去*/
+.nevList li a:hover{
+    color: #16b0bc;
+}
+/*nav*/
+.banner{
+    width: 100%;
+    height: 720px;
+    background: #cccccc;
+}
+.banner img{
+    width: 100%;
+    height: 720px;
+}
+/*banner*/
+
+.flower{
+    width: 100%;
+    height: 750px;
+    background: #f5f5f5;
+}
+.flowerContent{
+    width: 1170px;
+    height: 610px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+.flowerContent h1{
+    height: 50px;
+    text-align: center;
+    font-weight: 200;
+}
+.flowerList{
+    width: 100%;
+    height: 560px;
+}
+.flowerList .flowerItem{
+    float: left;
+    width: 570px;
+    height: 110px;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+.flowerList .flowerItem:nth-of-type(even){
+    margin-right: 0;
+}
+.flowerItem .itemThumb{
+    float: left;
+    width: 160px;
+    height: 96px;
+}
+.itemThumb a ,.itemThumb a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;/*圆角设置*/
+}
+.flowerItem .itemInfo{
+    width: 390px;
+    height: 100%;
+    float: right;
+    font-size: 14px;
+    color: #76838f;
+}
+.itemInfo h2 a{
+    display: block;
+    overflow: hidden; /*隐藏超出文字*/
+    white-space: nowrap; /*不换行*/
+    text-overflow: ellipsis; /*文字超出部分变成省略号*/
+    font-weight: 400;
+    font-size: 18px;
+    transition: all ease .5s;
+}
+.itemInfo h2 a:hover{
+    color: #16b0bc;
+    text-decoration: underline;
+}
+.itemInfo p.infoDesc{
+    padding: 5px 0;
+    height: 2.8em;
+    overflow: hidden;
+
+    position: relative;
+}
+.itemInfo p.infoDesc:after{
+    content: "...";
+
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+}  /*尾元素*/
+/*flower*/
+
+.huayi{
+    width: 100%;
+    height: 750px;
+    background: white;
+}
+.top{
+    width: 1170px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 15px;
+}
+.top h1{
+    height: 50px;
+    text-align: center;
+    font-weight: 200;
+}
+.mid{
+    width: 1170px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+.mid p{
+    color: #76838f;
+    font-weight: 300;
+}
+.bot{
+    width: 1170px;
+    height: 480px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+#left{
+    float: left;
+    width: 50px;
+    height: 100%;
+}
+#left div,#right div{
+    width: 30px;
+    height: 30px;
+    margin: 225px auto;
+    background: rgba(118, 130, 143, 0.55);
+    border-radius: 15px;
+}
+#mid{
+    float: left;
+    width: 1050px;
+    height: 100%;
+    overflow: hidden;
+}
+#mid .slide{
+    width: 1780px;
+    height: 100%;
+}
+#mid .slide .inside{
+    float: left;
+    margin-right: 20px;
+    width: 336px;
+    height: 100%;
+}
+#mid .slide .inside img{
+    width: 330px;
+    height: 300px;
+    margin-left: 3px;
+    margin-top: 5px;
+    border-radius: 165px;
+}
+#mid .slide .inside h3{
+    font-weight: normal;
+    text-align: center;
+    margin-top: 6px;
+}
+#mid .slide .inside p{
+    padding: 5px 0;
+    font-size: 14px;
+    color: #4f5860;
+    font-weight: 300;
+    overflow: hidden;
+
+    position: relative;
+}
+#mid .slide .inside a{
+    margin-top: 10px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    color: white;
+    width: 100%;
+    height: 50px;
+    background: red;
+}
+#right{
+    float: left;
+    width: 50px;
+    height: 100%;
+}
+/*huayi*/
+.five{
+    width: 100%;
+    height: 790px;
+    background: white;
+}
+#bigbiaoti{
+    margin: 50px auto;
+    margin-top: 70px;
+    width: 1170px;
+    height: 43px;
+}
+#bigbiaoti h1{
+    height: 43px;
+    text-align: center;
+    font-weight: 300;
+}
+#neirong{
+    margin: 30px auto;
+    padding: 10px;
+    width: 1170px;
+    height: 676px;
+}
+.five p{
+    margin: 10px auto;
+    width: 1170px;
+    height: 20px;
+    text-align: center;
+    font-weight: 300;
+}
+p.zhengzhou{
+    margin: 25px auto;
+}
+#picture{
+    margin: 45px auto;
+    width: 530px;
+    height: 340px;
+}
+
+.last{
+    width: 100%;
+    height: 183px;
+    background: #f5f5f5;
+    padding-bottom: 20px;
+    border: 1px solid #f0f2f5;
+}
+.last .lastOne{
+    width: 100%;
+    height: 56px;
+    margin-top: 10px;
+    padding: 5px 0;
+}
+.last .lastOne .onein{
+    width: 180px;
+    height: 50px;
+    margin: 3px auto;
+}
+.last .lastOne .onein .in{
+    float: left;
+    width: 46px;
+    height: 46px;
+    margin: 2px auto;
+    margin-right: 14px;
+    overflow: hidden;
+}
+.last .lastOne .onein .in a img{
+    width: 40px;
+    height: 40px;
+    margin: 3px auto;
+}
+.last .lastTwo,.last .lastThree,.last .lastFour{
+    margin: 0 auto;
+    width: 1170px;
+    height: 30px;
+    /*background: #4f5860;*/
+    margin-top: 6px;
+    text-align: center;
+}
+.last .lastTwo a{
+    margin: 0 auto;
+    font-weight: 400;
+    transition: all ease .5s;
+    color: #16b0bc;
+}
+.last .lastTwo img{
+    margin-left: 20px;
+    width: 18px;
+    height: 18px;
+}
+.last .lastTwo a:hover{
+    color: #16b0bc;
+    text-decoration: underline;
+}
