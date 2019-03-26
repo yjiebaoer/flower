@@ -15,12 +15,27 @@ a{
     color: #333;
 }
 /*默认样式*/
+
+@font-face {
+    font-family: 'iconfont';  /* project id 1047534 */
+    src: url('//at.alicdn.com/t/font_1047534_gyysqtp4za.eot');
+    src: url('//at.alicdn.com/t/font_1047534_gyysqtp4za.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1047534_gyysqtp4za.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1047534_gyysqtp4za.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1047534_gyysqtp4za.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1047534_gyysqtp4za.svg#iconfont') format('svg');
+}
+
 .nav{
     width: 100%;
     height: 79px;
     background: rgba(0,0,0,0.15);
     position: fixed;
     top: 0;
+    z-index: 999;
+}
+.active{
+    background: white;
 }
 .navContent{
     width: 1170px;
@@ -69,12 +84,50 @@ a{
 /*nav*/
 .banner{
     width: 100%;
-    height: 720px;
-    background: #cccccc;
+    height: auto;
+    overflow: hidden;
+    position: relative;
 }
-.banner img{
+.inner{
+    width: 400vw;
+    height: auto;
+    overflow: hidden;
+    transition: all 1s;
+    margin-left: -100vw;
+}
+.img-box{
+    width: 100vw;
+    height: auto;
+    float: left;
+}
+.img-box img{
     width: 100%;
-    height: 720px;
+    height: auto;
+    display: block;
+}
+.arrow{
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(0,0,0,0.16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'iconfont';
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+}
+.arrow:hover{
+    opacity: 1;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
 }
 /*banner*/
 
@@ -89,14 +142,16 @@ a{
     margin: 0 auto;
     padding: 70px 0;
 }
-.flowerContent h1{
+.flowerContent .huayu{
     height: 50px;
     text-align: center;
     font-weight: 200;
+    animation-duration: 0.5s!important;
 }
 .flowerList{
     width: 100%;
     height: 560px;
+    animation-duration: 0.5s!important;
 }
 .flowerList .flowerItem{
     float: left;
@@ -160,6 +215,10 @@ a{
     height: 750px;
     background: white;
 }
+
+.box{
+    animation-duration: 0.5s!important;
+}
 .top{
     width: 1170px;
     height: 40px;
@@ -182,64 +241,60 @@ a{
     color: #76838f;
     font-weight: 300;
 }
-.bot{
+
+
+.goods-wrapper{
     width: 1170px;
     height: 480px;
     margin: 0 auto;
     margin-top: 10px;
+    position: relative;
 }
-#left{
+.goods{
     float: left;
-    width: 50px;
-    height: 100%;
-}
-#left div,#right div{
-    width: 30px;
-    height: 30px;
-    margin: 225px auto;
-    background: rgba(118, 130, 143, 0.55);
-    border-radius: 15px;
-}
-#mid{
-    float: left;
-    width: 1050px;
+    width: 1068px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 51px;
     height: 100%;
     overflow: hidden;
 }
-#mid .slide{
-    width: 1780px;
+.goods-inner{
+    width: 5780px;
     height: 100%;
+    transition: all 1s;
+    margin-left: -1068px;
 }
-#mid .slide .inside{
+.goods-imgbox{
     float: left;
     margin-right: 20px;
     width: 336px;
     height: 100%;
 }
-#mid .slide .inside img{
+.goods-imgbox>img{
     width: 330px;
     height: 300px;
     margin-left: 3px;
     margin-top: 5px;
-    border-radius: 165px;
+    border-radius: 50%;
 }
-#mid .slide .inside h3{
+.goods-imgbox h3{
     font-weight: normal;
     text-align: center;
     margin-top: 6px;
 }
-#mid .slide .inside p{
+.goods-imgbox p{
     padding: 5px 0;
     font-size: 14px;
     color: #4f5860;
     font-weight: 300;
     overflow: hidden;
-
     position: relative;
 }
-#mid .slide .inside a{
+.goods-imgbox a{
     margin-top: 10px;
     line-height: 50px;
+    border-radius: 5px;
     text-align: center;
     display: block;
     color: white;
@@ -247,33 +302,48 @@ a{
     height: 50px;
     background: red;
 }
-#right{
-    float: left;
-    width: 50px;
-    height: 100%;
+.goods-arrow{
+    width: 51px;
+    height: 480px;
+    position: absolute;
+    text-align: center;
+    line-height: 400px;
+    top: 0;
+    font-size: 20px;
+    font-family: iconfont;
+    cursor: pointer;
 }
+.goods-prev{
+    left: 0;
+}
+.goods-next{
+    right: 0;
+}
+
 /*huayi*/
 .five{
     width: 100%;
-    height: 790px;
+    height: 850px;
     background: white;
 }
-#bigbiaoti{
-    margin: 50px auto;
+.bigbiaoti{
+    margin: 10px auto;
     margin-top: 70px;
     width: 1170px;
     height: 43px;
+    animation-duration: 0.5s!important;
 }
-#bigbiaoti h1{
+.bigbiaoti h1{
     height: 43px;
     text-align: center;
     font-weight: 300;
 }
-#neirong{
+.neirong{
     margin: 30px auto;
     padding: 10px;
     width: 1170px;
-    height: 676px;
+    height: 276px;
+    animation-duration: 0.5s!important;
 }
 .five p{
     margin: 10px auto;
@@ -290,6 +360,7 @@ p.zhengzhou{
     width: 530px;
     height: 340px;
 }
+
 
 .last{
     width: 100%;
@@ -344,4 +415,22 @@ p.zhengzhou{
 .last .lastTwo a:hover{
     color: #16b0bc;
     text-decoration: underline;
+}
+
+.totop{
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    right: 5px;
+    bottom: 10px;
+    background: #62a8ea;
+    z-index: 999;
+}
+.totop i{
+    align-items: center;
+    font-family: 'iconfont';
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    list-style: none;
 }
